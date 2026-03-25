@@ -1,6 +1,8 @@
 'use client';
 import {motion} from 'motion/react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Youtube, MessageCircle, Facebook } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -37,13 +39,51 @@ export default function Hero() {
               Led by Ex-Nestlé Quality Head with 20+ years of industry expertise.
             </p>
           </div>
-          <div className="mt-12 flex gap-4">
-            <button className="px-8 py-4 rounded-full bg-[#A68966] text-white font-medium hover:bg-[#A68966]/90 transition-all">
-              Book Consultation
-            </button>
-            <button className="px-8 py-4 rounded-full border border-[#A68966] text-[#A68966] font-medium hover:bg-[#A68966]/5 transition-all">
-              Explore Services
-            </button>
+          <div className="mt-12 flex flex-col gap-8">
+            <div className="flex gap-4">
+              <Link href="#contact" className="px-8 py-4 rounded-full bg-[#A68966] text-white font-medium hover:bg-[#A68966]/90 transition-all text-center">
+                Book Consultation
+              </Link>
+              <Link href="#services" className="px-8 py-4 rounded-full border border-[#A68966] text-[#A68966] font-medium hover:bg-[#A68966]/5 transition-all text-center">
+                Explore Services
+              </Link>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-6 pt-6 border-t border-gray-100 max-w-fit">
+              <span className="text-xs font-black uppercase tracking-[0.2em] text-[#D3211B] opacity-80">Follow Us</span>
+              <div className="flex items-center gap-4">
+                <a 
+                  href="https://www.youtube.com/@ISO%E0%A6%AA%E0%A6%BE%E0%A6%A0%E0%A6%B6%E0%A6%BE%E0%A6%B2%E0%A6%BE" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-[#A68966]/5 flex items-center justify-center hover:bg-[#FF0000] hover:scale-110 transition-all duration-300 group shadow-md"
+                  title="YouTube"
+                >
+                  <Youtube className="w-5 h-5 text-[#A68966] group-hover:text-white" />
+                </a>
+
+                <a 
+                  href="https://wa.me/919331874296" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-[#A68966]/5 flex items-center justify-center hover:bg-[#25D366] hover:scale-110 transition-all duration-300 group shadow-md"
+                  title="WhatsApp"
+                >
+                  <MessageCircle className="w-5 h-5 text-[#A68966] group-hover:text-white" />
+                </a>
+
+                <a 
+                  href="#" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-[#A68966]/5 flex items-center justify-center hover:bg-[#1877F2] hover:scale-110 transition-all duration-300 group shadow-md"
+                  title="Facebook"
+                >
+                  <Facebook className="w-5 h-5 text-[#A68966] group-hover:text-white" />
+                </a>
+              </div>
+            </div>
           </div>
         </motion.div>
         <motion.div 
