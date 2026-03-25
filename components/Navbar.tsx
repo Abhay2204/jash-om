@@ -21,22 +21,22 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-[100] bg-white shadow-md border-b border-gray-100">
       <div className="max-w-[1320px] mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center relative z-50">
-          <Image src="/image/logo.png" alt="Jash Om Standard" width={140} height={40} className="h-10 w-auto" />
+          <Image src="/image/logo.png" alt="Jash Om Standard" width={180} height={50} className="h-12 w-auto object-contain" priority />
         </Link>
         
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-8 text-sm font-bold tracking-wide uppercase">
           {NAV_LINKS.map((link) => (
-            <Link key={link.label} href={link.href} className="text-[#0B2D5C] hover:text-[#F39200] transition-colors">{link.label}</Link>
+            <Link key={link.label} href={link.href} className="text-[#A68966] hover:text-[#D3211B] transition-colors">{link.label}</Link>
           ))}
-          <Link href="#contact" className="px-6 py-2.5 rounded-full bg-[#0B2D5C] text-white hover:bg-[#F39200] transition-colors shadow-md">
+          <Link href="#contact" className="px-6 py-2.5 rounded-full bg-[#A68966] text-white hover:bg-[#D3211B] transition-colors shadow-md">
             Book Consultation
           </Link>
         </div>
 
         {/* Mobile Hamburger Toggle */}
         <button 
-          className="lg:hidden p-2 text-[#0B2D5C] relative z-[60]"
+          className="lg:hidden p-2 text-[#A68966] relative z-[60]"
           onClick={() => setIsMobileMenuOpen(true)}
           aria-label="Open Menu"
         >
@@ -54,10 +54,13 @@ export default function Navbar() {
           onClick={() => setIsMobileMenuOpen(false)}
         />
         
-        {/* Solid Navy Drawer */}
-        <div className={`absolute top-0 right-0 w-full max-w-sm h-full bg-[#0B2D5C] shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        {/* Solid Deep Gold Drawer */}
+        <div className={`absolute top-0 right-0 w-full max-w-sm h-full bg-[#A68966] shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
           <div className="p-6 flex items-center justify-between border-b border-white/10">
-            <span className="font-bold text-white tracking-[0.2em] text-lg uppercase">Jash Om</span>
+            <div className="flex items-center gap-3">
+              <Image src="/image/logo square.png" alt="Logo" width={40} height={40} className="w-10 h-10 rounded-lg bg-white p-1" />
+              <span className="font-bold text-white tracking-[0.2em] text-lg uppercase">Jash Om</span>
+            </div>
             <button 
               className="p-2 text-white/70 hover:text-white hover:bg-white/10 rounded-full transition-all"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -72,17 +75,17 @@ export default function Navbar() {
               <Link 
                 key={link.label} 
                 href={link.href} 
-                className="hover:text-[#F39200] transition-colors flex items-center gap-4"
+                className="hover:text-[#D3211B] transition-colors flex items-center gap-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                <span className="w-2 h-2 rounded-full bg-[#F39200] opacity-0 hover:opacity-100 transition-opacity"></span>
+                <span className="w-2 h-2 rounded-full bg-[#D3211B] opacity-0 hover:opacity-100 transition-opacity"></span>
                 {link.label}
               </Link>
             ))}
             <div className="pt-8 mt-4 border-t border-white/10">
               <Link 
                 href="#contact" 
-                className="block text-center px-8 py-4 rounded-full bg-[#F39200] text-white hover:bg-white hover:text-[#0B2D5C] transition-all shadow-lg font-black tracking-widest"
+                className="block text-center px-8 py-4 rounded-full bg-[#D3211B] text-white hover:bg-white hover:text-[#A68966] transition-all shadow-lg font-black tracking-widest"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 BOOK CONSULTATION

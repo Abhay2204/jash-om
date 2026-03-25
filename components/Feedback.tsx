@@ -42,8 +42,9 @@ export default function Feedback() {
   return (
     <section id="feedback" className="py-24 bg-[#F8FAFC] overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-6 mb-16">
-         <h2 className="text-sm font-bold tracking-[0.3em] text-[#F39200] uppercase mb-4">Market Perspective</h2>
-         <h3 className="text-3xl font-extrabold tracking-tight text-[#0B2D5C]">What Clients Say</h3>
+         <div className="w-16 h-1 bg-[#D3211B] mx-auto mt-6 rounded-full"></div>
+         <h2 className="text-sm font-bold tracking-[0.3em] text-[#D3211B] uppercase mb-4">Market Perspective</h2>
+         <h3 className="text-3xl font-extrabold tracking-tight text-[#A68966]">What Clients Say</h3>
       </div>
 
       <div className="relative flex overflow-x-hidden">
@@ -65,11 +66,11 @@ export default function Feedback() {
               key={i} 
               className="inline-block w-[350px] mx-4 p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:shadow-md transition-shadow shrink-0"
             >
-              <p className="text-[#0B2D5C] font-medium leading-relaxed mb-6 whitespace-normal italic">
+              <p className="text-[#A68966] font-medium leading-relaxed mb-6 whitespace-normal italic">
                 &ldquo;{t.text}&rdquo;
               </p>
               <div className="flex flex-col">
-                <span className="text-sm font-bold text-[#F39200] uppercase tracking-wider">{t.name}</span>
+                <span className="text-sm font-bold text-[#D3211B] uppercase tracking-wider">{t.name}</span>
                 <span className="text-xs text-gray-400 font-medium mt-1">{t.company}</span>
               </div>
             </div>

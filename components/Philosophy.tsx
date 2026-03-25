@@ -1,32 +1,68 @@
+import Image from 'next/image';
+
 export default function Philosophy() {
   return (
-    <section id="philosophy" className="py-28 md:py-48 relative overflow-hidden flex items-center justify-center min-h-[600px] md:min-h-[800px]">
+    <section id="philosophy" className="py-24 md:py-40 relative overflow-hidden flex items-center justify-center min-h-[600px] md:min-h-[850px] bg-white">
       
-      {/* Sticky Parallax Background Image */}
+      {/* Parallax Background (Crystal Clear) */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-fixed w-full h-full"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-fixed w-full h-full opacity-60"
         style={{ backgroundImage: "url('/image/PHILOSOPHY.png')" }}
       >
-        {/* Blurring & Navy Dark Overlay */}
-        <div className="absolute inset-0 bg-[#0B2D5C]/70 backdrop-blur-md"></div>
+        {/* Subtle white tint - NO general blur here */}
+        <div className="absolute inset-0 bg-white/20"></div>
       </div>
       
-      <div className="max-w-[1200px] mx-auto px-6 text-center relative z-10">
-        <h2 className="text-sm font-bold text-[#F39200] uppercase tracking-[0.4em] mb-12 drop-shadow-md">Our Philosophy</h2>
+      {/* Top frame accent border */}
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-[#A68966]/20 z-10"></div>
+      
+      <div className="max-w-[1100px] mx-auto px-6 relative z-10 flex flex-col items-center">
         
-        <blockquote className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-tight drop-shadow-2xl">
-          “Compliance is not <span className="text-[#F39200] italic font-extrabold pr-2">paperwork</span>— <br className="hidden md:block"/> it is <span className="underline decoration-[#F39200] decoration-[4px] underline-offset-[10px]">system discipline.</span>”
-        </blockquote>
-        
-        <p className="mt-14 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-white drop-shadow-lg leading-snug">
-          Building <span className="text-[#F39200] italic border-b-[3px] border-[#F39200]/30 pb-1">Practical</span> & <span className="text-[#F39200] italic border-b-[3px] border-[#F39200]/30 pb-1">Audit-Ready</span> <br className="hidden sm:block"/> <span className="mt-4 inline-block tracking-wide">Food Safety Systems.</span>
-        </p>
-        
-        <div className="w-24 h-1.5 bg-[#F39200] mx-auto mt-14 mb-10 rounded-full shadow-[0_0_15px_rgba(243,146,0,0.5)]"></div>
-        
-        <p className="text-lg md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed drop-shadow-lg font-light tracking-wide">
-          We focus on <span className="font-bold text-[#F39200]">practical, sustainable</span>, and <span className="font-bold text-[#F39200] italic pr-1">audit-ready</span> systems <br className="hidden lg:block"/>that add real <span className="font-bold text-white border-b-2 border-[#F39200] pb-1">business value</span>.
-        </p>
+        {/* Blurry Glass Text Area */}
+        <div className="relative p-10 md:p-20 bg-white/60 backdrop-blur-[10px] rounded-[48px] border border-white/40 shadow-2xl flex flex-col items-center text-center max-w-5xl">
+          
+          {/* Label */}
+          <h2 className="text-xs font-bold text-[#A68966] uppercase tracking-[0.5em] mb-12">
+            Our Philosophy
+          </h2>
+          
+          {/* Main Quote in Bold Serif */}
+          <blockquote className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#A68966] leading-[1.2] mb-12">
+            “Compliance is not <span className="text-gray-500 font-light block mt-2 md:inline md:mt-0 underline decoration-[#D3211B]/20 underline-offset-8 decoration-2">paperwork</span>— <br className="hidden md:block"/> it is <span className="text-[#D3211B] italic">system discipline.</span>”
+          </blockquote>
+          
+          {/* Teardrop Divider Icon from Logo */}
+          <div className="flex items-center justify-center mb-12 scale-1 pointer-events-none">
+            <div className="w-12 h-[1px] bg-[#A68966]/30"></div>
+            <div className="px-6 flex items-center gap-1 drop-shadow-sm">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="#D3211B">
+                  <path d="M12 2C12 2 6 9.5 6 15C6 18.3 8.7 21 12 21C15.3 21 18 18.3 18 15C18 9.5 12 2Z" />
+               </svg>
+            </div>
+            <div className="w-12 h-[1px] bg-[#A68966]/30"></div>
+          </div>
+          
+          {/* Supporting Text */}
+          <div className="space-y-10">
+            <p className="text-xl md:text-2xl font-medium tracking-[0.05em] text-[#A68966]/90 leading-relaxed uppercase">
+              Building Practical & <span className="text-[#D3211B]">Audit-Ready</span> <br className="hidden sm:block"/> Food Safety Systems.
+            </p>
+            
+            <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto leading-[1.8] font-light tracking-[0.08em] font-sans">
+              We believe in bridging the gap between complexity and clarity. Our focus is on <span className="font-bold text-[#A68966]">practical</span>, sustainable, and <span className="text-[#D3211B] font-bold">certified</span> systems that add real long-term business value to your organization.
+            </p>
+          </div>
+
+          {/* Bronze CTA Accent */}
+          <div className="mt-16">
+            <a 
+              href="#contact" 
+              className="px-10 py-5 bg-[#A68966] text-white font-bold rounded-full hover:bg-[#D3211B] transition-all shadow-xl shadow-[#A68966]/30 flex items-center gap-3 uppercase tracking-widest text-sm"
+            >
+              Connect with an Expert
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 export default function TrustStrip() {
   const certifications = ['ISO 22000', 'FSSC 22000', 'HACCP', 'BRCGS', 'ISO 9001', 'ISO 14001', 'HALAL', 'SEDEX'];
   return (
-    <section className="py-6 bg-[#0B2D5C] overflow-hidden border-t-8 border-[#F39200]">
+    <section className="py-6 bg-[#A68966] overflow-hidden border-t-8 border-[#D3211B]">
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }

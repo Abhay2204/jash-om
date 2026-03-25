@@ -42,14 +42,14 @@ export default function Services() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-end mb-16 md:mb-24">
           <div>
             <div className="inline-flex items-center gap-4 mb-4">
-              <span className="w-8 h-[2px] bg-[#F39200]"></span>
-              <span className="text-sm font-bold text-[#F39200] uppercase tracking-widest">Core Capabilities</span>
+              <span className="w-8 h-[2px] bg-[#D3211B]"></span>
+              <span className="text-sm font-bold text-[#D3211B] uppercase tracking-widest">Core Capabilities</span>
             </div>
-            <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-[#0B2D5C] leading-tight">
+            <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-[#A68966] leading-tight">
               What We Deliver
             </h3>
           </div>
-          <p className="text-xl md:text-2xl text-[#F39200] font-medium leading-relaxed lg:pb-2 italic tracking-tight">
+          <p className="text-xl md:text-2xl text-[#D3211B] font-medium leading-relaxed lg:pb-2 italic tracking-tight">
             From gap analysis to full certification readiness — we bring 21+ years of hands-on food safety expertise to every engagement.
           </p>
         </div>
@@ -65,28 +65,28 @@ export default function Services() {
               >
                 {/* Number */}
                 <div className="md:col-span-1">
-                  <span className="text-3xl md:text-4xl font-black text-gray-100 group-hover:text-[#F39200]/30 transition-colors duration-300 select-none">
+                  <span className="text-3xl md:text-4xl font-black text-gray-100 group-hover:text-[#D3211B]/30 transition-colors duration-300 select-none">
                     {s.num}
                   </span>
                 </div>
 
                 {/* Icon */}
                 <div className="md:col-span-1 hidden md:flex justify-center">
-                  <div className="w-14 h-14 rounded-2xl bg-[#0B2D5C]/5 group-hover:bg-[#0B2D5C] flex items-center justify-center transition-all duration-300">
-                    <Icon className="w-7 h-7 text-[#0B2D5C] group-hover:text-white transition-colors" />
+                  <div className="w-14 h-14 rounded-2xl bg-[#A68966]/5 group-hover:bg-[#A68966] flex items-center justify-center transition-all duration-300">
+                    <Icon className="w-7 h-7 text-[#A68966] group-hover:text-white transition-colors" />
                   </div>
                 </div>
 
                 {/* Title */}
                 <div className="md:col-span-4">
-                  <h4 className="text-2xl md:text-3xl font-bold text-[#0B2D5C] group-hover:text-[#F39200] transition-colors duration-300 tracking-tight leading-tight">
+                  <h4 className="text-2xl md:text-3xl font-bold text-[#A68966] group-hover:text-[#D3211B] transition-colors duration-300 tracking-tight leading-tight">
                     {s.title}
                   </h4>
                 </div>
 
                 {/* Divider line */}
                 <div className="md:col-span-1 hidden md:flex justify-center">
-                  <div className="w-[1px] h-12 bg-gray-200 group-hover:bg-[#F39200]/30 transition-colors"></div>
+                  <div className="w-[1px] h-12 bg-gray-200 group-hover:bg-[#D3211B]/30 transition-colors"></div>
                 </div>
 
                 {/* Desc */}

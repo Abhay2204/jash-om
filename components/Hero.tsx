@@ -12,16 +12,16 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="pb-12 md:pb-24 pt-8"
         >
-          <div className="flex items-center gap-4 text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-[#F39200] opacity-90">
-            <span className="w-12 h-[2px] bg-[#F39200]"></span>
+          <div className="flex items-center gap-4 text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-[#D3211B] opacity-90">
+            <span className="w-12 h-[2px] bg-[#D3211B]"></span>
             West-Bengal, India
           </div>
           
           <h1 className="mt-8 flex flex-col uppercase leading-[0.85] tracking-tighter">
-            <span className="text-6xl md:text-8xl lg:text-[7.5rem] font-black text-[#0B2D5C]">
+            <span className="text-6xl md:text-8xl lg:text-[7.5rem] font-black text-[#A68966]">
               JASH OM
             </span>
-            <span className="mt-2 md:mt-4 text-3xl md:text-5xl lg:text-6xl font-bold text-[#0B2D5C]/90">
+            <span className="mt-2 md:mt-4 text-3xl md:text-5xl lg:text-6xl font-bold text-[#A68966]/90">
               Standard Services
             </span>
             <span className="mt-1 md:mt-2 text-2xl md:text-4xl lg:text-5xl font-light tracking-wide text-gray-400">
@@ -29,8 +29,8 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="mt-12 pl-6 border-l-4 border-[#F39200]">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#0B2D5C] leading-snug">
+          <div className="mt-12 pl-6 border-l-4 border-[#D3211B]">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#A68966] leading-snug">
               Building Audit-Ready <br className="hidden sm:block" /> Food Safety Systems.
             </h2>
             <p className="mt-4 text-lg text-gray-600 leading-relaxed max-w-md">
@@ -38,10 +38,10 @@ export default function Hero() {
             </p>
           </div>
           <div className="mt-12 flex gap-4">
-            <button className="px-8 py-4 rounded-full bg-[#0B2D5C] text-white font-medium hover:bg-[#0B2D5C]/90 transition-all">
+            <button className="px-8 py-4 rounded-full bg-[#A68966] text-white font-medium hover:bg-[#A68966]/90 transition-all">
               Book Consultation
             </button>
-            <button className="px-8 py-4 rounded-full border border-[#0B2D5C] text-[#0B2D5C] font-medium hover:bg-[#0B2D5C]/5 transition-all">
+            <button className="px-8 py-4 rounded-full border border-[#A68966] text-[#A68966] font-medium hover:bg-[#A68966]/5 transition-all">
               Explore Services
             </button>
           </div>
