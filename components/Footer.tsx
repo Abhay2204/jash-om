@@ -53,6 +53,7 @@ export default function Footer() {
               <li><a href="#services" className="text-gray-500 hover:text-[#D3211B] transition-colors text-sm font-bold">Core Capabilities</a></li>
               <li><a href="#why-us" className="text-gray-500 hover:text-[#D3211B] transition-colors text-sm font-bold">Why Partner With Us</a></li>
               <li><a href="#feedback" className="text-gray-500 hover:text-[#D3211B] transition-colors text-sm font-bold">Global Success Stories</a></li>
+              <li><a href="#education" className="text-gray-500 hover:text-[#D3211B] transition-colors text-sm font-bold">Educational Videos</a></li>
             </ul>
           </div>
 

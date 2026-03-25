@@ -7,6 +7,7 @@ import Services from '@/components/Services';
 import Founder from '@/components/Founder';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Feedback from '@/components/Feedback';
+import Education from '@/components/Education';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Services />
       <WhyChooseUs />
       <Founder />
+      <Education />
       <Feedback />
       <Contact />
       <Footer />

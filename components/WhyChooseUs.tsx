@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
           className="text-center mb-20"
         >
           <span className="text-[#D3211B] font-bold tracking-[0.2em] text-xs uppercase mb-4 block">Unmatched Excellence</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#A68966]">Why Choose Us?</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#A68966]">Why Choose Us?</h2>
           <div className="w-20 h-1 bg-[#D3211B] mx-auto mt-6 rounded-full"></div>
         </motion.div>
 
@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 bg-[#A68966] p-10 md:p-14 rounded-[40px] shadow-2xl relative overflow-hidden text-white"
+            className="lg:col-span-12 xl:col-span-5 bg-[#A68966] p-6 sm:p-10 md:p-14 rounded-[32px] md:rounded-[40px] shadow-2xl relative overflow-hidden text-white"
           >
             <div className="absolute top-0 right-0 -m-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
             <h3 className="text-3xl font-bold mb-8">Specialized Expertise</h3>
@@ -107,7 +107,7 @@ export default function WhyChooseUs() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-7"
+            className="lg:col-span-12 xl:col-span-7"
           >
             <div className="mb-10 lg:pl-4">
               <h3 className="text-3xl font-bold text-[#A68966]">Industry Coverage</h3>

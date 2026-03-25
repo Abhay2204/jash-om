@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { label: 'Services', href: '#services' },
   { label: 'Founder', href: '#founder' },
   { label: 'Why Us', href: '#why-us' },
+  { label: 'Education', href: '#education' },
   { label: 'Feedback', href: '#feedback' },
 ];
 
