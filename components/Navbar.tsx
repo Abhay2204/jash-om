@@ -30,8 +30,8 @@ export default function Navbar() {
           {NAV_LINKS.map((link) => (
             <Link key={link.label} href={link.href} className="text-[#A68966] hover:text-[#D3211B] transition-colors">{link.label}</Link>
           ))}
-          <Link href="#contact" className="px-6 py-2.5 rounded-full bg-[#A68966] text-white hover:bg-[#D3211B] transition-colors shadow-md">
-            Book Consultation
+          <Link href="#contact" className="px-6 py-2.5 rounded-full bg-[#A68966] text-white hover:bg-[#D3211B] transition-all shadow-md">
+            Free Consultation
           </Link>
         </div>
 
@@ -84,13 +84,13 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="pt-8 mt-4 border-t border-white/10">
-              <Link 
-                href="#contact" 
-                className="block text-center px-8 py-4 rounded-full bg-[#D3211B] text-white hover:bg-white hover:text-[#A68966] transition-all shadow-lg font-black tracking-widest"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                BOOK CONSULTATION
-              </Link>
+                <Link 
+                  href="#contact" 
+                  className="block text-center px-8 py-4 rounded-full bg-[#D3211B] text-white hover:bg-white hover:text-[#A68966] transition-all shadow-lg font-black tracking-widest text-base"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  FREE CONSULTATION
+                </Link>
             </div>
           </div>
         </div>

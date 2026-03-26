@@ -131,11 +131,15 @@ export default function Contact() {
               </div>
 
               <div className="sm:col-span-2">
-                <button className="w-full py-4 sm:py-5 rounded-2xl bg-[#A68966] text-white text-base sm:text-lg font-black uppercase tracking-widest sm:tracking-[0.2em] shadow-lg shadow-[#A68966]/30 hover:bg-[#D3211B] hover:shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center gap-3">
-                  <Send className="w-5 h-5 sm:w-6 sm:h-6" /> Request Free Consultation
+                <button className="relative w-full py-5 rounded-2xl bg-gradient-to-r from-[#1A1A1A] to-[#333333] text-white text-base sm:text-lg font-bold md:font-black uppercase tracking-[0.05em] sm:tracking-[0.15em] shadow-2xl shadow-black/10 hover:shadow-[#D3211B]/40 group overflow-hidden transition-all duration-500 hover:scale-[1.02] active:scale-95">
+                  <div className="absolute inset-0 bg-[#D3211B] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+                  <div className="relative flex items-center justify-center gap-3 md:gap-4 px-4">
+                    <Send className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                    <span className="whitespace-nowrap">Get Free Consultation</span>
+                  </div>
                 </button>
-                <p className="text-center mt-6 text-xs text-gray-400 font-medium">
-                  By submitting this form, you agree to being contacted regarding your inquiry.
+                <p className="text-center mt-6 text-xs text-gray-400 font-medium italic">
+                  * 100% Free - No obligations or hidden charges.
                 </p>
               </div>
             </form>

@@ -41,8 +41,8 @@ export default function Hero() {
           </div>
           <div className="mt-12 flex flex-col gap-8">
             <div className="flex gap-4">
-              <Link href="#contact" className="px-8 py-4 rounded-full bg-[#A68966] text-white font-medium hover:bg-[#A68966]/90 transition-all text-center">
-                Book Consultation
+              <Link href="#contact" className="px-8 py-4 rounded-full bg-[#A68966] text-white font-medium hover:bg-[#D3211B] transition-all text-center shadow-lg shadow-[#A68966]/20">
+                Free Consultation
               </Link>
               <Link href="#services" className="px-8 py-4 rounded-full border border-[#A68966] text-[#A68966] font-medium hover:bg-[#A68966]/5 transition-all text-center">
                 Explore Services
