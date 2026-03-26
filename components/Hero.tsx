@@ -6,7 +6,7 @@ import { Youtube, MessageCircle, Facebook } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="pt-28 md:pt-36 pb-0 overflow-hidden">
+    <section className="pt-28 md:pt-16 pb-0 overflow-hidden">
       <div className="max-w-[1320px] mx-auto px-6 grid md:grid-cols-2 gap-8 md:gap-16 items-end">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
