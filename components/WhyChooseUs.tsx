@@ -1,7 +1,24 @@
-import { Award, UserCheck, BookOpen, Target, CheckCircle, Briefcase, HandHelping, Factory, Wheat, Salad, Warehouse, Coffee, GlassWater, Truck, GraduationCap, Laptop, Ship } from 'lucide-react';
+'use client';
+import { useState } from 'react';
+import { Award, UserCheck, BookOpen, Target, CheckCircle, Briefcase, HandHelping, Factory, Wheat, Salad, Warehouse, Coffee, GlassWater, Truck, GraduationCap, Laptop, Ship, X, FileCheck, ExternalLink } from 'lucide-react';
 import * as motion from 'motion/react-client';
 
 export default function WhyChooseUs() {
+  const [selectedCert, setSelectedCert] = useState<{ name: string; path: string } | null>(null);
+
+  const certs = [
+    { name: "ISO 9001:2015", path: "/documents/1. ISO 9001 Certificate IRQS_01.07.2024.pdf", highlight: true },
+    { name: "HACCP Certification", path: "/documents/2. HACCP certificate_BRCGS_15.06.2024.pdf", highlight: true },
+    { name: "BRCGS V9 FS", path: "/documents/3. BRCGS V9 FS certificate-BRCGS_14.12.2023.pdf", highlight: true },
+    { name: "FSSC 22000 2018", path: "/documents/4. FSSC 22000 2018 TUV -01.02.2021.pdf", highlight: false },
+    { name: "FSSC V5 SGS", path: "/documents/5. FSSC V5  SGS-01.03. 2020.pdf", highlight: true },
+    { name: "FOSTAC (2024)", path: "/documents/11. FOSTAC certificate- 20.01.2024.pdf", highlight: false },
+    { name: "EMS-14001", path: "/documents/9. EMS-14001 Certificate 2012.pdf", highlight: false },
+    { name: "GLP Certificate", path: "/documents/12. GLP certificate.pdf", highlight: false },
+    { name: "Auditor Transition", path: "/documents/annex sl module 1  auditor transition course.jpeg", highlight: false },
+    { name: "ISO 14001 Transition", path: "/documents/iso 14001, 2015 module 2 auditor transition course.jpeg", highlight: false },
+  ];
+
   const reasons = [
     { title: '20+ Years Industry Experience', icon: Award, description: 'Deep-rooted expertise in quality standards and regulatory compliance.' },
     { title: 'Ex-Quality Head (Multi-Factory)', icon: UserCheck, description: 'Direct experience managing large-scale operations across multiple facilities.' },
@@ -74,6 +91,93 @@ export default function WhyChooseUs() {
             </motion.div>
           ))}
         </div>
+
+        {/* Integrated Vertical Document Viewer */}
+        <div className="mt-32 mb-20 bg-white border border-gray-100 rounded-[40px] shadow-2xl shadow-[#A68966]/5 overflow-hidden">
+          <div className="grid lg:grid-cols-12 min-h-[600px]">
+            {/* Left Sidebar: Certificate Names */}
+            <div className="lg:col-span-4 bg-[#F8FAFC] border-r border-gray-100 p-8 sm:p-12">
+              <div className="mb-10">
+                <h3 className="text-xs font-black text-[#A68966] uppercase tracking-[0.4em] mb-3">Accreditations</h3>
+                <p className="text-3xl font-bold text-gray-900 tracking-tight">Certification Viewer</p>
+                <div className="w-12 h-1 bg-[#D3211B] mt-4 rounded-full"></div>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                {certs.map((cert) => {
+                  const isActive = (selectedCert?.name || certs[0].name) === cert.name;
+                  return (
+                    <button
+                      key={cert.name}
+                      disabled={isActive}
+                      onClick={() => setSelectedCert(cert)}
+                      className={`group flex items-center justify-between p-4 rounded-2xl transition-all text-left
+                        ${isActive 
+                          ? 'bg-[#A68966] text-white shadow-lg translate-x-2 cursor-default pointer-events-none' 
+                          : 'hover:bg-white text-gray-500 hover:text-[#A68966] cursor-pointer'
+                        }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className={`w-1.5 h-1.5 rounded-full transition-colors 
+                          ${isActive ? 'bg-white' : cert.highlight ? 'bg-[#D3211B]' : 'bg-gray-300'}`}>
+                        </div>
+                        <span className={`text-xs font-bold uppercase tracking-widest ${cert.highlight && !isActive ? 'text-[#D3211B]' : ''}`}>
+                          {cert.name}
+                        </span>
+                      </div>
+                      {cert.highlight && !isActive && (
+                        <Award className="w-4 h-4 text-[#D3211B]" />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+              
+              <div className="mt-12 pt-8 border-t border-gray-200/60 hidden lg:block">
+                <p className="text-xs text-gray-400 font-medium leading-relaxed">
+                  Select a certificate to view the official accreditation and compliance details.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Side: Document Preview */}
+            <div className="lg:col-span-8 bg-gray-50 p-6 sm:p-10 flex flex-col">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm">
+                    <FileCheck className="w-6 h-6 text-[#A68966]" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900">{(selectedCert || certs[0]).name}</h4>
+                </div>
+                <a 
+                  href={(selectedCert || certs[0]).path} 
+                  download 
+                  className="px-6 py-2.5 bg-white text-[#A68966] font-bold text-xs uppercase tracking-widest rounded-xl shadow-sm border border-gray-100 hover:bg-[#A68966] hover:text-white transition-all flex items-center gap-2"
+                >
+                  Download <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+
+              <div className="flex-1 bg-white rounded-2xl shadow-inner border border-gray-100 p-2 relative overflow-hidden min-h-[400px]">
+                {(selectedCert || certs[0]).path.toLowerCase().endsWith('.pdf') ? (
+                  <iframe 
+                    src={`${(selectedCert || certs[0]).path}#toolbar=0`} 
+                    className="w-full h-full rounded-xl border-0"
+                    title={(selectedCert || certs[0]).name}
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-gray-50/50">
+                    <img 
+                      src={(selectedCert || certs[0]).path} 
+                      alt={(selectedCert || certs[0]).name} 
+                      className="max-w-full max-h-full object-contain rounded-lg shadow-xl"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
         
         <div className="mt-32 grid lg:grid-cols-12 gap-12 items-start">
           <motion.div 
@@ -143,6 +247,8 @@ export default function WhyChooseUs() {
           </p>
         </motion.div>
       </div>
+
     </section>
   );
 }
+
